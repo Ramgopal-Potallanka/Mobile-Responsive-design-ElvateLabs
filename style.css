@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  color: #111;
+  background-color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Layout container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Navbar */
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .icons span {
+    margin-left: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  .ic {
+    width: 2rem;
+  }
+.hero-section {
+  height: 100vh;
+  background: url('bg1.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to top */
+  align-items: flex-start;     /* Align content to left */
+  padding: 100px 20px 20px;    /* Top padding pushes content below navbar */
+  color: white;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  white-space: normal;
+  margin-bottom: 1rem;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  white-space: normal;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  margin-top: 2rem;
+  color: #FF6600;
+  font-size: 18px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #FF6600;
+}
+
+.breadcrumb span {
+  color: gray;
+}
+
+/* Content */
+.content {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-top: 2rem;
+  font-family: inherit;
+  padding: 0 1rem;
+}
+
+/* Summer Section */
+.summer-section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.summer-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* Grid */
+.summer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
+.summer-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s ease;
+}
+
+.summer-card:hover {
+  transform: scale(1.03);
+}
+
+.card-text {
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background-color: #47084e;
+  color: white;
+  padding: 60px 20px 40px;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-links h3,
+.newsletter h3,
+.social h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.links-grid {
+  display: flex;
+  gap: 40px;
+}
+
+.links-grid ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links-grid li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.app-download h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.store-buttons img {
+  width: 140px;
+  margin: 10px 10px 0 0;
+}
+
+.newsletter {
+  max-width: 300px;
+}
+
+.newsletter p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.subscribe-btn {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.social-icons span {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .summer-card {
+    width: 100%;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .links-grid {
+    flex-direction: column;
+  }
+
+  .store-buttons img {
+    width: 120px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    height: 4rem;
+    position: absolute;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+    display: none;
+  }
+
+  .icons {
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  }
+
+  .hero-section {
+    padding: 5rem 1rem 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .summer-section h1 {
+    font-size: 2rem;
+  }
+
+  .summer-card {
+    height: 15rem;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .links-grid {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .store-buttons img {
+    width: 9rem;
+  }
+
+  .newsletter {
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .navbar {
+    padding: 0.8rem;
+    width: 100vw;
+    height: 8vh;
+    position: absolute;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+    display: none;
+  }
+.icons span{
+display: none;
+}
+
+.icons span:nth-child(1){
+    display:flex;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.9rem;
+  }
+
+  .content {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .summer-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .subscribe-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .social-icons span {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+}
