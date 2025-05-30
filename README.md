@@ -1,6 +1,6 @@
 # Mobile-Responsive-design-ElvateLabs
 
-# Summer in Hyderabad - Responsive Website
+# Summer in India - Responsive Website
 
 This project is a mobile-friendly, responsive webpage titled "Summer in India" built with HTML and CSS. It demonstrates a modern design with media queries to adapt the layout for different screen sizes.
 
